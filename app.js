@@ -7,9 +7,7 @@
  url = require('url'),
  jsdom = require('jsdom'),
  express = require('express'),
- fs = require('fs'),
- http = require('http');
- ;
+ fs = require('fs');
 
  var app = express();
  
@@ -71,15 +69,20 @@
 						// //generate result 	
 						for ( var i = 0; i < text.length; ++i) {
 							result.items[i] = {
-								word: result.items[i]= text[i]+"#"+licenseTime[i]+"#"+regTime[i]
+								location: text[i],
+								lisense: licenseTime[i],
+								reg: regTime[i]
 							};
 						}				
 						//console.log(result); //debug	
+						res.writeHead(200, {"Content-Type": "application/json"});
+						res.write(JSON.stringify(result.items));
+						res.end();
 						
-						res.render('simple', {
-							title: 'bar',		          
-							items: result.items
-						});
+						// res.render('simple', {
+						// 	title: 'bar',		          
+						// 	items: result.items
+						// });
 					} 
 
 				})
