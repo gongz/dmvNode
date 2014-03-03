@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    header
+        .page-width
+          nav
+            ul                
+            - items.forEach(function(item){
+                li= item['word']
+            - })
+            hr
+    
+
+

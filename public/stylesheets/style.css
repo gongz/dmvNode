@@ -1,0 +1,27 @@
+body {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    font-size: 62.5%;
+}
+nav
+{
+	position: fixed;
+}
+li
+{	
+	display: inline;
+	list-style-type: none;
+	font-size: 1.5em;
+	padding: 1em;
+}
+
+.page-width {
+    margin: auto;
+    max-width: 1200px;
+    min-width: 800px;
+    width: 80%;
+}
+
